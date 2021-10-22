@@ -46,6 +46,7 @@ class AdminController extends Controller
         	}else{
         		$pass = $req->pass;
         		$confirm = $req->confirm;
+                
         		if ($confirm == $pass) {
         			DB::table('users')->insert([
         				'name' => $req->nama,
