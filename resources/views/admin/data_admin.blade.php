@@ -240,21 +240,9 @@
 
                     <option value="{{ $o->dealer }}">Dealer : Bisma Flagship Shop</option>
 
-                    @elseif($o->dealer == "all")
+                    @elseif($o->dealer == "group")
 
-                    <option value="{{ $o->dealer }}">Dealer : All</option>
-
-                    @elseif($o->dealer == "khusus1")
-
-                    <option value="{{ $o->dealer }}">Dealer : Khusus1</option>
-
-                    @elseif($o->dealer == "khusus2")
-
-                    <option value="{{ $o->dealer }}">Dealer : Khusus2</option>
-
-                    @elseif($o->dealer == "khusus3")
-
-                    <option value="{{ $o->dealer }}">Dealer : Khusus3</option>
+                    <option value="{{ $o->dealer }}">Dealer : Group</option>
 
                     @else
 
@@ -264,7 +252,7 @@
 
                     <option disabled="disabled">--------------------</option>
 
-                    <option value="all">All</option>
+                    <option value="group">Group</option>
 
                     <option value="AA0101">Bisma Sentral</option>
 
@@ -283,12 +271,6 @@
                     <option value="AA0109">Bisma Sunset</option>
 
                     <option value="AA0104F">Bisma Flagship Shop</option>
-
-                    <option value="khusus1">Khusus1</option>
-
-                    <option value="khusus2">Khusus2</option>
-
-                    <option value="khusus3">Khusus3</option>
 
                 </select>
 
@@ -314,11 +296,9 @@
 
                     <option disabled="disabled">--------------------</option>
 
-                    <option value="admin">Admin</option>
-
                     <option value="super">Super</option>
 
-                    <option value="owner">Owner</option>
+                    <option value="admin">Admin</option>
 
                     <option value="viewer">Viewer</option>
 
@@ -331,24 +311,6 @@
             </div>
 
             </div>
-
-            <div class="row">
-
-            <div class="col-lg-6">
-
-              <div class="form-group has-feedback">
-
-                <input type="text" class="form-control" value="{{ $o->kode_dealer }}" name="kode" placeholder="Kode">
-
-                <span class="fa fa-pencil form-control-feedback"></span>
-
-              </div>
-
-            </div>
-
-            </div>
-
-
 
           </div>
 
@@ -628,7 +590,7 @@
 
                 <select class="form-control" name="dealer" required="required">
 
-                    <option value="all">All</option>
+                    <option value="group">Group</option>
 
                     <option value="AA0101">Bisma Sentral</option>
 
@@ -647,12 +609,6 @@
                     <option value="AA0109">Bisma Sunset</option>
 
                     <option value="AA0104F">Bisma Flagship Shop</option>
-
-                    <option value="khusus1">Khusus1</option>
-
-                    <option value="khusus2">Khusus2</option>
-
-                    <option value="khusus3">Khusus3</option>
 
                 </select>
 
@@ -674,12 +630,8 @@
 
                 <select class="form-control" name="akses" required="required">
 
-                    <option value="admin">Admin</option>
-
                     <option value="super">Super</option>
-
-                    <option value="owner">Owner</option>
-
+                    <option value="admin">Admin</option>
                     <option value="viewer">Viewer</option>
 
                 </select>

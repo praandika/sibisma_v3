@@ -1,1 +1,6 @@
-<li class="{{ Request::is('web')?'active':null}}"><a href="https://yamahabismagroup.com" target="_blank"><i class="fa fa-globe"></i> <span>Website</span></a></li>
+<li class="nav-item">
+    <a href="https://yamahabismagroup.com" aria-expanded="false" target="_blank">
+        <i class="fas fa-globe-asia"></i>
+        <p>Website</p>
+    </a>
+</li>

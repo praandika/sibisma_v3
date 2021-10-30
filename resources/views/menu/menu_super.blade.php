@@ -1,397 +1,272 @@
-      <!-- sidebar menu: : style can be found in sidebar.less -->
-
-      <ul class="sidebar-menu" data-widget="tree"> 
-
-        
-
-        @include('menu.link_website')
-
-<!-- ......................................................................... -->
-
-        <li class="header">INVENTORY</li>
-
-
-
-        <li class="{{ Request::is('inventory')?'active':null}}"><a href="{{URL('inventory')}}"><i class="fa fa-area-chart"></i> <span>Dashboard</span></a></li>
-
-<!-- ......................................................................... -->  
-
-        <li class="{{ Request::is('dealer')?'active':null}}"><a href="{{URL('dealer')}}"><i class="fa fa-home"></i> <span>Data Dealer</span></a></li>
-
-<!-- ......................................................................... -->  
-
-        <li class="{{ Request::is('manpower')?'active':null}}">
-        <a href="{{URL('manpower/')}}"><i class="fa fa-group"></i> <span>Data Manpower</span>
-        &nbsp;
-        <span class="label label-danger">New!</span></a>
-        </li>
-
-<!-- ......................................................................... -->      
-
-        <li class="treeview 
-
-        {{ Request::is('stok/AA0101')?'active':null}}
-
-        {{ Request::is('stok/AA0102')?'active':null}}
-
-        {{ Request::is('stok/AA0104')?'active':null}}
-
-        {{ Request::is('stok/AA0105')?'active':null}}
-
-        {{ Request::is('stok/AA0106')?'active':null}}
-
-        {{ Request::is('stok/AA0107')?'active':null}}
-
-        {{ Request::is('stok/AA0108')?'active':null}}
-
-        {{ Request::is('stok/AA0109')?'active':null}}
-
-        {{ Request::is('stok/AA0104F')?'active':null}}">
-
-          <a href="#">
-
-            <i class="fa fa-motorcycle"></i> <span>Stok</span>
-
-            <span class="pull-right-container">
-
-              <i class="fa fa-angle-left pull-right"></i>
-
-            </span>
-
-          </a>
-
-          <ul class="treeview-menu">
-
-            <li class="{{ Request::is('stok/AA0101')?'active':null}}"><a href="{{URL('stok/AA0101')}}"><i class="fa fa-angle-double-right"></i> <span>Bisma Sentral</span></a></li>
-
-            <li class="{{ Request::is('stok/AA0102')?'active':null}}"><a href="{{URL('stok/AA0102')}}"><i class="fa fa-angle-double-right"></i> <span>Bisma Cokro</span></a></li>
-
-            <li class="{{ Request::is('stok/AA0104')?'active':null}}"><a href="{{URL('stok/AA0104')}}"><i class="fa fa-angle-double-right"></i> <span>Bisma Hasanuddin</span></a></li>
-
-            <li class="{{ Request::is('stok/AA0105')?'active':null}}"><a href="{{URL('stok/AA0105')}}"><i class="fa fa-angle-double-right"></i> <span>Bisma TTS</span></a></li>
-
-            <li class="{{ Request::is('stok/AA0106')?'active':null}}"><a href="{{URL('stok/AA0106')}}"><i class="fa fa-angle-double-right"></i> <span>Bisma Imbo</span></a></li>
-
-            <li class="{{ Request::is('stok/AA0107')?'active':null}}"><a href="{{URL('stok/AA0107')}}"><i class="fa fa-angle-double-right"></i> <span>Bisma Mandiri</span></a></li>
-
-            <li class="{{ Request::is('stok/AA0108')?'active':null}}"><a href="{{URL('stok/AA0108')}}"><i class="fa fa-angle-double-right"></i> <span>Bisma WR Supratman</span></a></li>
-
-            <li class="{{ Request::is('stok/AA0109')?'active':null}}"><a href="{{URL('stok/AA0109')}}"><i class="fa fa-angle-double-right"></i> <span>Bisma Sunset Road</span></a></li>
-
-            <li class="{{ Request::is('stok/AA0104F')?'active':null}}"><a href="{{URL('stok/AA0104F')}}"><i class="fa fa-angle-double-right"></i> <span>Flagship Shop Denpasar</span></a></li>
-
-          </ul>
-
-        </li>
-
-<!-- ........................................................................... -->
-
-        <li class="treeview
-
-        {{ Request::is('in/masuk/'.$now.'/AA0101')?'active':null}}
-
-        {{ Request::is('in/masuk/'.$now.'/AA0102')?'active':null}}
-
-        {{ Request::is('in/masuk/'.$now.'/AA0104')?'active':null}}
-
-        {{ Request::is('in/masuk/'.$now.'/AA0105')?'active':null}}
-
-        {{ Request::is('in/masuk/'.$now.'/AA0106')?'active':null}}
-
-        {{ Request::is('in/masuk/'.$now.'/AA0107')?'active':null}}
-
-        {{ Request::is('in/masuk/'.$now.'/AA0108')?'active':null}}
-
-        {{ Request::is('in/masuk/'.$now.'/AA0109')?'active':null}}
-
-        {{ Request::is('in/masuk/'.$now.'/AA0104F')?'active':null}}">
-
-          <a href="#">
-
-            <i class="fa fa-sign-in"></i> <span>Stok Masuk</span>
-
-            <span class="pull-right-container">
-
-              <i class="fa fa-angle-left pull-right"></i>
-
-            </span>
-
-          </a>
-
-          <ul class="treeview-menu">
-
-            <li class="{{ Request::is('in/masuk/'.$now.'/AA0101')?'active':null}}"><a href="{{URL('in/masuk/'.$now.'/AA0101')}}"><i class="fa fa-angle-double-right"></i> <span>Bisma Sentral</span></a></li>
-
-            <li class="{{ Request::is('in/masuk/'.$now.'/AA0102')?'active':null}}"><a href="{{URL('in/masuk/'.$now.'/AA0102')}}"><i class="fa fa-angle-double-right"></i> <span>Bisma Cokro</span></a></li>
-
-            <li class="{{ Request::is('in/masuk/'.$now.'/AA0104')?'active':null}}"><a href="{{URL('in/masuk/'.$now.'/AA0104')}}"><i class="fa fa-angle-double-right"></i> <span>Bisma Hasanuddin</span></a></li>
-
-            <li class="{{ Request::is('in/masuk/'.$now.'/AA0105')?'active':null}}"><a href="{{URL('in/masuk/'.$now.'/AA0105')}}"><i class="fa fa-angle-double-right"></i> <span>Bisma TTS</span></a></li>
-
-            <li class="{{ Request::is('in/masuk/'.$now.'/AA0106')?'active':null}}"><a href="{{URL('in/masuk/'.$now.'/AA0106')}}"><i class="fa fa-angle-double-right"></i> <span>Bisma Imbo</span></a></li>
-
-            <li class="{{ Request::is('in/masuk/'.$now.'/AA0107')?'active':null}}"><a href="{{URL('in/masuk/'.$now.'/AA0107')}}"><i class="fa fa-angle-double-right"></i> <span>Bisma Mandiri</span></a></li>
-
-            <li class="{{ Request::is('in/masuk/'.$now.'/AA0108')?'active':null}}"><a href="{{URL('in/masuk/'.$now.'/AA0108')}}"><i class="fa fa-angle-double-right"></i> <span>Bisma WR Supratman</span></a></li>
-
-            <li class="{{ Request::is('in/masuk/'.$now.'/AA0109')?'active':null}}"><a href="{{URL('in/masuk/'.$now.'/AA0109')}}"><i class="fa fa-angle-double-right"></i> <span>Bisma Sunset Road</span></a></li>
-
-            <li class="{{ Request::is('in/masuk/'.$now.'/AA0104F')?'active':null}}"><a href="{{URL('in/masuk/'.$now.'/AA0104F')}}"><i class="fa fa-angle-double-right"></i> <span>Flagship Shop Denpasar</span></a></li>
-
-          </ul>
-
-        </li>
-
-<!-- ......................................................................... -->      
-
-        <li class="treeview
-
-        {{ Request::is('out/keluar/'.$now.'/AA0101')?'active':null}}
-
-        {{ Request::is('out/keluar/'.$now.'/AA0102')?'active':null}}
-
-        {{ Request::is('out/keluar/'.$now.'/AA0104')?'active':null}}
-
-        {{ Request::is('out/keluar/'.$now.'/AA0105')?'active':null}}
-
-        {{ Request::is('out/keluar/'.$now.'/AA0106')?'active':null}}
-
-        {{ Request::is('out/keluar/'.$now.'/AA0107')?'active':null}}
-
-        {{ Request::is('out/keluar/'.$now.'/AA0108')?'active':null}}
-
-        {{ Request::is('out/keluar/'.$now.'/AA0109')?'active':null}}
-
-        {{ Request::is('out/keluar/'.$now.'/AA0104F')?'active':null}}">
-
-          <a href="#">
-
-            <i class="fa fa-sign-out"></i> <span>Stok Keluar</span>
-
-            <span class="pull-right-container">
-
-              <i class="fa fa-angle-left pull-right"></i>
-
-            </span>
-
-          </a>
-
-          <ul class="treeview-menu">
-
-            <li class="{{ Request::is('out/keluar/'.$now.'/AA0101')?'active':null}}"><a href="{{URL('out/keluar/'.$now.'/AA0101')}}"><i class="fa fa-angle-double-right"></i> <span>Bisma Sentral</span></a></li>
-
-            <li class="{{ Request::is('out/keluar/'.$now.'/AA0102')?'active':null}}"><a href="{{URL('out/keluar/'.$now.'/AA0102')}}"><i class="fa fa-angle-double-right"></i> <span>Bisma Cokro</span></a></li>
-
-            <li class="{{ Request::is('out/keluar/'.$now.'/AA0104')?'active':null}}"><a href="{{URL('out/keluar/'.$now.'/AA0104')}}"><i class="fa fa-angle-double-right"></i> <span>Bisma Hasanuddin</span></a></li>
-
-            <li class="{{ Request::is('out/keluar/'.$now.'/AA0105')?'active':null}}"><a href="{{URL('out/keluar/'.$now.'/AA0105')}}"><i class="fa fa-angle-double-right"></i> <span>Bisma TTS</span></a></li>
-
-            <li class="{{ Request::is('out/keluar/'.$now.'/AA0106')?'active':null}}"><a href="{{URL('out/keluar/'.$now.'/AA0106')}}"><i class="fa fa-angle-double-right"></i> <span>Bisma Imbo</span></a></li>
-
-            <li class="{{ Request::is('out/keluar/'.$now.'/AA0107')?'active':null}}"><a href="{{URL('out/keluar/'.$now.'/AA0107')}}"><i class="fa fa-angle-double-right"></i> <span>Bisma Mandiri</span></a></li>
-
-            <li class="{{ Request::is('out/keluar/'.$now.'/AA0108')?'active':null}}"><a href="{{URL('out/keluar/'.$now.'/AA0108')}}"><i class="fa fa-angle-double-right"></i> <span>Bisma WR Supratman</span></a></li>
-
-            <li class="{{ Request::is('out/keluar/'.$now.'/AA0109')?'active':null}}"><a href="{{URL('out/keluar/'.$now.'/AA0109')}}"><i class="fa fa-angle-double-right"></i> <span>Bisma Sunset Road</span></a></li>
-
-            <li class="{{ Request::is('out/keluar/'.$now.'/AA0104F')?'active':null}}"><a href="{{URL('out/keluar/'.$now.'/AA0104F')}}"><i class="fa fa-angle-double-right"></i> <span>Flagship Shop Denpasar</span></a></li>
-
-          </ul>
-
-        </li>
-
-<!-- ......................................................................... -->      
-
-        <li class="treeview
-
-        {{ Request::is('sale/jual/'.$now.'/AA0101')?'active':null}}
-
-        {{ Request::is('sale/jual/'.$now.'/AA0102')?'active':null}}
-
-        {{ Request::is('sale/jual/'.$now.'/AA0104')?'active':null}}
-
-        {{ Request::is('sale/jual/'.$now.'/AA0105')?'active':null}}
-
-        {{ Request::is('sale/jual/'.$now.'/AA0106')?'active':null}}
-
-        {{ Request::is('sale/jual/'.$now.'/AA0107')?'active':null}}
-
-        {{ Request::is('sale/jual/'.$now.'/AA0108')?'active':null}}
-
-        {{ Request::is('sale/jual/'.$now.'/AA0109')?'active':null}}
-
-        {{ Request::is('sale/jual/'.$now.'/AA0104F')?'active':null}}">
-
-          <a href="#">
-
-            <i class="fa fa-check"></i> <span>Stok Terjual</span>
-
-            <span class="pull-right-container">
-
-              <i class="fa fa-angle-left pull-right"></i>
-
-            </span>
-
-          </a>
-
-          <ul class="treeview-menu">
-
-            <li class="{{ Request::is('sale/jual/'.$now.'/AA0101')?'active':null}}"><a href="{{URL('sale/jual/'.$now.'/AA0101')}}"><i class="fa fa-angle-double-right"></i> <span>Bisma Sentral</span></a></li>
-
-            <li class="{{ Request::is('sale/jual/'.$now.'/AA0102')?'active':null}}"><a href="{{URL('sale/jual/'.$now.'/AA0102')}}"><i class="fa fa-angle-double-right"></i> <span>Bisma Cokro</span></a></li>
-
-            <li class="{{ Request::is('sale/jual/'.$now.'/AA0104')?'active':null}}"><a href="{{URL('sale/jual/'.$now.'/AA0104')}}"><i class="fa fa-angle-double-right"></i> <span>Bisma Hasanuddin</span></a></li>
-
-            <li class="{{ Request::is('sale/jual/'.$now.'/AA0105')?'active':null}}"><a href="{{URL('sale/jual/'.$now.'/AA0105')}}"><i class="fa fa-angle-double-right"></i> <span>Bisma TTS</span></a></li>
-
-            <li class="{{ Request::is('sale/jual/'.$now.'/AA0106')?'active':null}}"><a href="{{URL('sale/jual/'.$now.'/AA0106')}}"><i class="fa fa-angle-double-right"></i> <span>Bisma Imbo</span></a></li>
-
-            <li class="{{ Request::is('sale/jual/'.$now.'/AA0107')?'active':null}}"><a href="{{URL('sale/jual/'.$now.'/AA0107')}}"><i class="fa fa-angle-double-right"></i> <span>Bisma Mandiri</span></a></li>
-
-            <li class="{{ Request::is('sale/jual/'.$now.'/AA0108')?'active':null}}"><a href="{{URL('sale/jual/'.$now.'/AA0108')}}"><i class="fa fa-angle-double-right"></i> <span>Bisma WR Supratman</span></a></li>
-
-            <li class="{{ Request::is('sale/jual/'.$now.'/AA0109')?'active':null}}"><a href="{{URL('sale/jual/'.$now.'/AA0109')}}"><i class="fa fa-angle-double-right"></i> <span>Bisma Sunset Road</span></a></li>
-
-            <li class="{{ Request::is('sale/jual/'.$now.'/AA0104F')?'active':null}}"><a href="{{URL('sale/jual/'.$now.'/AA0104F')}}"><i class="fa fa-angle-double-right"></i> <span>Flagship Shop Denpasar</span></a></li>
-
-          </ul>
-
-        </li>
-
-<!-- ......................................................................... -->
-
-        <li class="{{ Request::is('fands')?'active':null}}"><a href="{{URL('fands')}}"><i class="fa fa-pencil"></i> <span>Faktur & Service</span></a></li>
-
-
-
-<!-- ......................................................................... -->      
-
-        <li class="treeview
-
-        {{ Request::is('opname/stok/'.$now.'/AA0101')?'active':null}}
-
-        {{ Request::is('opname/stok/'.$now.'/AA0102')?'active':null}}
-
-        {{ Request::is('opname/stok/'.$now.'/AA0104')?'active':null}}
-
-        {{ Request::is('opname/stok/'.$now.'/AA0105')?'active':null}}
-
-        {{ Request::is('opname/stok/'.$now.'/AA0106')?'active':null}}
-
-        {{ Request::is('opname/stok/'.$now.'/AA0107')?'active':null}}
-
-        {{ Request::is('opname/stok/'.$now.'/AA0108')?'active':null}}
-
-        {{ Request::is('opname/stok/'.$now.'/AA0109')?'active':null}}
-
-        {{ Request::is('opname/stok/'.$now.'/AA0104F')?'active':null}}">
-
-          <a href="#">
-
-            <i class="fa fa-briefcase"></i> <span>Stok Opname</span>
-
-            <span class="pull-right-container">
-
-              <i class="fa fa-angle-left pull-right"></i>
-
-            </span>
-
-          </a>
-
-          <ul class="treeview-menu">
-
-            <li class="{{ Request::is('opname/stok/'.$now.'/AA0101')?'active':null}}"><a href="{{URL('opname/stok/'.$now.'/AA0101')}}"><i class="fa fa-angle-double-right"></i> <span>Bisma Sentral</span></a></li>
-
-            <li class="{{ Request::is('opname/stok/'.$now.'/AA0102')?'active':null}}"><a href="{{URL('opname/stok/'.$now.'/AA0102')}}"><i class="fa fa-angle-double-right"></i> <span>Bisma Cokro</span></a></li>
-
-            <li class="{{ Request::is('opname/stok/'.$now.'/AA0104')?'active':null}}"><a href="{{URL('opname/stok/'.$now.'/AA0104')}}"><i class="fa fa-angle-double-right"></i> <span>Bisma Hasanuddin</span></a></li>
-
-            <li class="{{ Request::is('opname/stok/'.$now.'/AA0105')?'active':null}}"><a href="{{URL('opname/stok/'.$now.'/AA0105')}}"><i class="fa fa-angle-double-right"></i> <span>Bisma TTS</span></a></li>
-
-            <li class="{{ Request::is('opname/stok/'.$now.'/AA0106')?'active':null}}"><a href="{{URL('opname/stok/'.$now.'/AA0106')}}"><i class="fa fa-angle-double-right"></i> <span>Bisma Imbo</span></a></li>
-
-            <li class="{{ Request::is('opname/stok/'.$now.'/AA0107')?'active':null}}"><a href="{{URL('opname/stok/'.$now.'/AA0107')}}"><i class="fa fa-angle-double-right"></i> <span>Bisma Mandiri</span></a></li>
-
-            <li class="{{ Request::is('opname/stok/'.$now.'/AA0108')?'active':null}}"><a href="{{URL('opname/stok/'.$now.'/AA0108')}}"><i class="fa fa-angle-double-right"></i> <span>Bisma WR Supratman</span></a></li>
-
-            <li class="{{ Request::is('opname/stok/'.$now.'/AA0109')?'active':null}}"><a href="{{URL('opname/stok/'.$now.'/AA0109')}}"><i class="fa fa-angle-double-right"></i> <span>Bisma Sunset Road</span></a></li>
-
-            <li class="{{ Request::is('opname/stok/'.$now.'/AA0104F')?'active':null}}"><a href="{{URL('opname/stok/'.$now.'/AA0104F')}}"><i class="fa fa-angle-double-right"></i> <span>Flagship Shop Denpasar</span></a></li>
-
-          </ul>
-
-        </li>
-
-
-
-        <li class="header">DAFTAR</li>
-
-<!-- ......................................................................... -->
-
-        <li class="{{ Request::is('unit')?'active':null}}"><a href="{{URL('unit')}}"><i class="fa fa-asterisk"></i> <span>Daftar Unit & Warna</span></a></li>
-
-<!-- ......................................................................... -->
-
-        <li class="{{ Request::is('leasing')?'active':null}}"><a href="{{URL('leasing')}}"><i class="fa fa-file"></i> <span>Daftar Leasing</span></a></li>
-
-<!-- ......................................................................... -->
-
-        <li class="header">LAPORAN</li>      
-
-
-
-        <li class="treeview
-
-        {{ Request::is('report')?'active':null}}
-
-        {{ Request::is('report/unit')?'active':null}}
-
-        {{ Request::is('report/riil')?'active':null}}">
-
-          <a href="#">
-
-            <i class="fa fa-file-text"></i> <span>Laporan</span>
-
-            <span class="pull-right-container">
-
-              <i class="fa fa-angle-left pull-right"></i>
-
-            </span>
-
-          </a>
-
-          <ul class="treeview-menu">
-
-            <li class="{{ Request::is('report')?'active':null}}"><a href="{{URL('report')}}"><i class="fa fa-angle-double-right"></i> <span>Laporan Stok</span></a></li>
-
-            <li class="{{ Request::is('report/riil')?'active':null}}"><a href="{{URL('report/riil')}}"><i class="fa fa-angle-double-right"></i> <span>Laporan Penjualan Riil</span></a></li>
-
-            <li class="{{ Request::is('report/unit')?'active':null}}"><a href="{{URL('report/unit')}}"><i class="fa fa-angle-double-right"></i> <span>Stok Unit</span></a></li>
-
-          </ul>
-
-        </li>
-
-        <li class="{{ Request::is('lapor')?'active':null}}">
-        <a href="{{URL('lapor')}}"><i class="fa fa-pencil"></i> <span>Buat Laporan Stok</span>
-        &nbsp;
-        <span class="label label-warning">Penting!</span></a>
-        </li>
-
-
-
-        <li class="header">BOOKING</li>
-
-<!-- ......................................................................... -->
-
-        @include('menu.link_booking_service')
-
-
-
-        <li class="header">ADMIN</li>
-
-<!-- ......................................................................... -->
-
-        <li class="{{ Request::is('admin')?'active':null}}"><a href="{{URL('admin')}}"><i class="fa fa-user"></i> <span>Data Admin</span></a></li>
-
-      </ul>
+<ul class="nav nav-primary">
+    <!-- ------------------------------------------ -->
+    @include('menu.link_website')
+    <!-- ------------------------------------------ -->
+    <li class="nav-section">
+        <span class="sidebar-mini-icon">
+            <i class="fa fa-ellipsis-h"></i>
+        </span>
+        <h4 class="text-section">INVENTORY</h4>
+    </li>
+    <!-- ------------------------------------------ -->
+    <li class="nav-item active">
+        <a href="{{URL('inventory')}}" aria-expanded="false">
+            <i class="fas fa-chart-line"></i>
+            <p>Dashboard</p>
+        </a>
+    </li>
+    <!-- ------------------------------------------ -->
+    <li class="nav-item">
+        <a href="{{URL('dealer')}}" aria-expanded="false">
+            <i class="fas fa-home"></i>
+            <p>Data Dealer</p>
+        </a>
+    </li>
+    <!-- ------------------------------------------ -->
+    <li class="nav-item">
+        <a href="{{URL('manpower/')}}" aria-expanded="false">
+            <i class="fas fa-users"></i>
+            <p>Data Manpower</p>
+        </a>
+    </li>
+    <!-- ------------------------------------------ -->
+    <li class="nav-item">
+        <a data-toggle="collapse" href="#datastok">
+            <i class="fas fa-motorcycle"></i>
+            <p>Stok</p>
+            <span class="caret"></span>
+        </a>
+        <div class="collapse" id="datastok">
+            <ul class="nav nav-collapse">
+                <li>
+                    <a href="{{URL('stok/AA0101')}}">
+                        <span class="sub-item">Bisma Sentral</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{URL('stok/AA0102')}}">
+                        <span class="sub-item">Bisma Cokro</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{URL('stok/AA0104')}}">
+                        <span class="sub-item">Bisma Hasanudin</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{URL('stok/AA0105')}}">
+                        <span class="sub-item">Bisma TTS</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{URL('stok/AA0106')}}">
+                        <span class="sub-item">Bisma Imbo</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{URL('stok/AA0107')}}">
+                        <span class="sub-item">Bisma Mandiri</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{URL('stok/AA0108')}}">
+                        <span class="sub-item">Bisma Supratman</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{URL('stok/AA0109')}}">
+                        <span class="sub-item">Bisma Sunset</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </li>
+    <!-- ------------------------------------------ -->
+    <li class="nav-item">
+        <a data-toggle="collapse" href="#catatstok">
+            <i class="fas fa-pencil-alt"></i>
+            <p>Catat Stok</p>
+            <span class="caret"></span>
+        </a>
+        <div class="collapse" id="catatstok">
+            <ul class="nav nav-collapse">
+                <li>
+                    <a href="{{URL('fands/AA0101')}}">
+                        <span class="sub-item">Bisma Sentral</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{URL('fands/AA0102')}}">
+                        <span class="sub-item">Bisma Cokro</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{URL('fands/AA0104')}}">
+                        <span class="sub-item">Bisma Hasanudin</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{URL('fands/AA0105')}}">
+                        <span class="sub-item">Bisma TTS</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{URL('fands/AA0106')}}">
+                        <span class="sub-item">Bisma Imbo</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{URL('fands/AA0107')}}">
+                        <span class="sub-item">Bisma Mandiri</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{URL('fands/AA0108')}}">
+                        <span class="sub-item">Bisma Supratman</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{URL('fands/AA0109')}}">
+                        <span class="sub-item">Bisma Sunset</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </li>
+    <!-- ------------------------------------------ -->
+    <li class="nav-item">
+        <a data-toggle="collapse" href="#stokopname">
+            <i class="fas fa-warehouse"></i>
+            <p>Stok Opname</p>
+            <span class="caret"></span>
+        </a>
+        <div class="collapse" id="stokopname">
+            <ul class="nav nav-collapse">
+                <li>
+                    <a href="{{URL('opname/stok/'.$now.'/AA0101')}}">
+                        <span class="sub-item">Bisma Sentral</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{URL('opname/stok/'.$now.'/AA0102')}}">
+                        <span class="sub-item">Bisma Cokro</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{URL('opname/stok/'.$now.'/AA0104')}}">
+                        <span class="sub-item">Bisma Hasanudin</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{URL('opname/stok/'.$now.'/AA0105')}}">
+                        <span class="sub-item">Bisma TTS</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{URL('opname/stok/'.$now.'/AA0106')}}">
+                        <span class="sub-item">Bisma Imbo</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{URL('opname/stok/'.$now.'/AA0107')}}">
+                        <span class="sub-item">Bisma Mandiri</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{URL('opname/stok/'.$now.'/AA0108')}}">
+                        <span class="sub-item">Bisma Supratman</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{URL('opname/stok/'.$now.'/AA0109')}}">
+                        <span class="sub-item">Bisma Sunset</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </li>
+    <!-- ------------------------------------------ -->
+    <li class="nav-section">
+        <span class="sidebar-mini-icon">
+            <i class="fa fa-ellipsis-h"></i>
+        </span>
+        <h4 class="text-section">DAFTAR</h4>
+    </li>
+    <!-- ------------------------------------------ -->
+    <li class="nav-item">
+        <a href="{{URL('unit')}}" aria-expanded="false">
+            <i class="fas fa-tint"></i>
+            <p>Daftar Unit & Warna</p>
+        </a>
+    </li>
+    <!-- ------------------------------------------ -->
+    <li class="nav-item">
+        <a href="{{URL('leasing')}}" aria-expanded="false">
+            <i class="fas fa-credit-card"></i>
+            <p>Daftar Leasing</p>
+        </a>
+    </li>
+    <!-- ------------------------------------------ -->
+    <li class="nav-section">
+        <span class="sidebar-mini-icon">
+            <i class="fa fa-ellipsis-h"></i>
+        </span>
+        <h4 class="text-section">LAPORAN</h4>
+    </li>
+    <!-- ------------------------------------------ -->
+    <li class="nav-item">
+        <a data-toggle="collapse" href="#laporan">
+            <i class="fas fa-file-alt"></i>
+            <p>Laporan</p>
+            <span class="caret"></span>
+        </a>
+        <div class="collapse" id="laporan">
+            <ul class="nav nav-collapse">
+                <li>
+                    <a href="{{URL('report')}}">
+                        <span class="sub-item">Laporan Stok</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{URL('report/riil')}}">
+                        <span class="sub-item">Laporan Riil</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{URL('report/unit')}}">
+                        <span class="sub-item">Laporan Unit</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{URL('lapor')}}">
+                        <span class="sub-item">Buat Lapor Stok</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </li>
+    <!-- ------------------------------------------ -->
+    <li class="nav-section">
+        <span class="sidebar-mini-icon">
+            <i class="fa fa-ellipsis-h"></i>
+        </span>
+        <h4 class="text-section">BOOKING</h4>
+    </li>
+    <!-- ------------------------------------------ -->
+    @include('menu.link_booking_service')
+    <!-- ------------------------------------------ -->
+    <li class="nav-section">
+        <span class="sidebar-mini-icon">
+            <i class="fa fa-ellipsis-h"></i>
+        </span>
+        <h4 class="text-section">ADMIN</h4>
+    </li>
+    <!-- ------------------------------------------ -->
+    <li class="nav-item">
+        <a href="{{URL('admin')}}" aria-expanded="false">
+            <i class="fas fa-user-shield"></i>
+            <p>Admin</p>
+        </a>
+    </li>
+    <!-- ------------------------------------------ -->
+</ul>

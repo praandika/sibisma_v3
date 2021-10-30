@@ -20,15 +20,37 @@ class LoginController extends Controller
     	$pass = $request->pass;
 
     	$cek = DB::table('users')->where('username',$user)->first();
+
     	if ($cek) {
     		if (Hash::check($pass,$cek->password)) {
                 Session::put('name',$cek->name);
     			Session::put('user',$cek->username);
     			Session::put('akses',$cek->akses);
-				Session::put('dealer',$cek->dealer);
 				Session::put('id',$cek->id);
-				Session::put('kode_dealer',$cek->kode_dealer);
+				Session::put('kode_dealer',$cek->dealer);
 				Session::put('login',TRUE);
+
+				if (Session::put('kode_dealer',$cek->dealer) == "AA0101") {
+					Session::put('nama_dealer',"Bisma Sentral");
+				}elseif (Session::put('kode_dealer',$cek->dealer) == "AA0102") {
+					Session::put('nama_dealer',"Bisma Cokro");
+				}elseif (Session::put('kode_dealer',$cek->dealer) == "AA0104") {
+					Session::put('nama_dealer',"Bisma Hasanuddin");
+				}elseif (Session::put('kode_dealer',$cek->dealer) == "AA0105") {
+					Session::put('nama_dealer',"Bisma TTS");
+				}elseif (Session::put('kode_dealer',$cek->dealer) == "AA0106") {
+					Session::put('nama_dealer',"Bisma Imbo");
+				}elseif (Session::put('kode_dealer',$cek->dealer) == "AA0107") {
+					Session::put('nama_dealer',"Bisma Mandiri");
+				}elseif (Session::put('kode_dealer',$cek->dealer) == "AA0108") {
+					Session::put('nama_dealer',"Bisma Supratman");
+				}elseif (Session::put('kode_dealer',$cek->dealer) == "AA0109") {
+					Session::put('nama_dealer',"Bisma Sunset Road");
+				}elseif (Session::put('kode_dealer',$cek->dealer) == "AA0104F") {
+					Session::put('nama_dealer',"Flagship Shop");
+				}else{
+					Session::put('nama_dealer',"Bisma Group");
+				}
 				
 				$login = \Carbon\Carbon::now('GMT+8')->format('Y-m-d H:i:s');
 				DB::table('users')->where('id',$cek->id)->update([
@@ -80,9 +102,9 @@ class LoginController extends Controller
     	}else{
     		if ($confirm == $pass) {
 	    		DB::table('users')->insert([
-	            'username' => $user,
-	            'password' => Hash::make($pass),
-	            'akses' => $request->akses
+					'username' => $user,
+					'password' => Hash::make($pass),
+					'akses' => $request->akses
         		]);
         		toast('Username berhasil ditambah','success')->width('300px');
        			return redirect('/register');

@@ -54,7 +54,6 @@ class AdminController extends Controller
         				'password' => Hash::make($pass),
         				'akses' => $req->akses,
                         'dealer' => $req->dealer,
-                        'kode_dealer' => $req->kode,
         				'created_at' => \Carbon\Carbon::now('GMT+8'),
         			]);
         			toast('Data berhasil di tambah','success');
@@ -76,7 +75,6 @@ class AdminController extends Controller
         		'name' => $req->nama,
         		'username' => $req->user,
                 'dealer' => $req->dealer,
-                'kode_dealer' => $req->kode,
         		'akses' => $req->akses,
         		'updated_at' => \Carbon\Carbon::now('GMT+8'),
         	]);
