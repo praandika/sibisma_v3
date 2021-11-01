@@ -30,98 +30,22 @@
             
             <!-- MENU -->
 
-            @if(Session::get('akses') == "super")
+            @if(Session::get('akses') == "admin")
 
-                @include('menu.menu_super')
+                @include('menu.menu_admin')
 
-            @elseif((Session::get('akses') == "admin") AND (Session::get('dealer') == "AA0101"))
-
-                @include('menu.menu_sentral')
-
-            @elseif((Session::get('akses') == "admin") AND (Session::get('dealer') == "AA0102"))
-
-                @include('menu.menu_bmm')
-
-            @elseif((Session::get('akses') == "admin") AND (Session::get('dealer') == "AA0104"))
-
-                @include('menu.menu_ud')
-
-            @elseif((Session::get('akses') == "admin") AND (Session::get('dealer') == "AA0105"))
-
-                @include('menu.menu_tts')
-
-            @elseif((Session::get('akses') == "admin") AND (Session::get('dealer') == "AA0106"))
-
-                @include('menu.menu_imbo')
-
-            @elseif((Session::get('akses') == "admin") AND (Session::get('dealer') == "AA0107"))
-
-                @include('menu.menu_mandiri')
-
-            @elseif((Session::get('akses') == "admin") AND (Session::get('dealer') == "AA0108"))
-
-                @include('menu.menu_wr')
-
-            @elseif((Session::get('akses') == "admin") AND (Session::get('dealer') == "AA0109"))
-
-                @include('menu.menu_sunset')
-
-            @elseif((Session::get('akses') == "admin") AND (Session::get('dealer') == "AA0104F"))
-
-                @include('menu.menu_fss')
-
-            @elseif((Session::get('akses') == "owner") AND (Session::get('dealer') == "khusus1"))
-
-                @include('menu.menu_khusus1')
-
-            @elseif((Session::get('akses') == "owner") AND (Session::get('dealer') == "khusus2"))
-
-                @include('menu.menu_khusus2')
-
-            @elseif((Session::get('akses') == "owner") AND (Session::get('dealer') == "khusus3"))
-
-                @include('menu.menu_khusus3')
-            <!-- ----------------------VIEWER------------------------------------------------------------------- -->
-
-            @elseif((Session::get('akses') == "viewer") AND (Session::get('dealer') == "all"))
-
-                @include('menu.menu_view')
-
-            @elseif((Session::get('akses') == "viewer") AND (Session::get('dealer') == "all"))
-
-                @include('menu.menu_view')
-
-            @elseif((Session::get('akses') == "viewer") AND (Session::get('dealer') == "all"))
-
-                @include('menu.menu_view')
-
-            @elseif((Session::get('akses') == "viewer") AND (Session::get('dealer') == "all"))
-
-                @include('menu.menu_view')
-
-            @elseif((Session::get('akses') == "viewer") AND (Session::get('dealer') == "all"))
-
-                @include('menu.menu_view')
-
-            @elseif((Session::get('akses') == "viewer") AND (Session::get('dealer') == "all"))
-
-                @include('menu.menu_view')
-
-            @elseif((Session::get('akses') == "viewer") AND (Session::get('dealer') == "all"))
-
-                @include('menu.menu_view')
-
-            @elseif((Session::get('akses') == "viewer") AND (Session::get('dealer') == "all"))
-
-                @include('menu.menu_view')
-
-            @elseif((Session::get('akses') == "viewer") AND (Session::get('dealer') == "all"))
-
-                @include('menu.menu_view')                                                                
+            @elseif(Session::get('akses') == "user")
+            
+                @include('menu.menu_user')                                                     
 
             @else
 
-                @include('menu.menu_view')
+            <li class="nav-section">
+                <span class="sidebar-mini-icon">
+                    <i class="fa fa-ellipsis-h"></i>
+                </span>
+                <h4 class="text-section">Anda tidak memiliki akses!</h4>
+            </li>
 
             @endif
 

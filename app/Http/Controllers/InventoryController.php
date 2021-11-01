@@ -655,7 +655,7 @@ class InventoryController extends Controller
                 ->whereMonth('tanggal_keluar','03')
                 ->whereYear('tanggal_keluar',$tahun)
                 ->sum('qty_out');
-                $out2 = $jual3 + $keluar3;
+                $out3 = $jual3 + $keluar3;
 
                 $jual4 = DB::table('juals')
                 ->whereMonth('tanggal_jual','04')
@@ -665,7 +665,7 @@ class InventoryController extends Controller
                 ->whereMonth('tanggal_keluar','04')
                 ->whereYear('tanggal_keluar',$tahun)
                 ->sum('qty_out');
-                $out2 = $jual4 + $keluar4;
+                $out4 = $jual4 + $keluar4;
 
                 $jual5 = DB::table('juals')
                 ->whereMonth('tanggal_jual','05')
@@ -675,7 +675,7 @@ class InventoryController extends Controller
                 ->whereMonth('tanggal_keluar','05')
                 ->whereYear('tanggal_keluar',$tahun)
                 ->sum('qty_out');
-                $out2 = $jual5 + $keluar5;
+                $out5 = $jual5 + $keluar5;
 
                 $jual6 = DB::table('juals')
                 ->whereMonth('tanggal_jual','06')
@@ -685,7 +685,7 @@ class InventoryController extends Controller
                 ->whereMonth('tanggal_keluar','06')
                 ->whereYear('tanggal_keluar',$tahun)
                 ->sum('qty_out');
-                $out2 = $jual6 + $keluar6;
+                $out6 = $jual6 + $keluar6;
 
                 $jual7 = DB::table('juals')
                 ->whereMonth('tanggal_jual','07')
@@ -695,7 +695,7 @@ class InventoryController extends Controller
                 ->whereMonth('tanggal_keluar','07')
                 ->whereYear('tanggal_keluar',$tahun)
                 ->sum('qty_out');
-                $out2 = $jual7 + $keluar7;
+                $out7 = $jual7 + $keluar7;
 
                 $jual8 = DB::table('juals')
                 ->whereMonth('tanggal_jual','08')
@@ -705,7 +705,7 @@ class InventoryController extends Controller
                 ->whereMonth('tanggal_keluar','08')
                 ->whereYear('tanggal_keluar',$tahun)
                 ->sum('qty_out');
-                $out2 = $jual8 + $keluar8;
+                $out8 = $jual8 + $keluar8;
 
                 $jual9 = DB::table('juals')
                 ->whereMonth('tanggal_jual','09')
@@ -715,7 +715,7 @@ class InventoryController extends Controller
                 ->whereMonth('tanggal_keluar','09')
                 ->whereYear('tanggal_keluar',$tahun)
                 ->sum('qty_out');
-                $out2 = $jual9 + $keluar9;
+                $out9 = $jual9 + $keluar9;
 
                 $jual10 = DB::table('juals')
                 ->whereMonth('tanggal_jual','10')
@@ -725,7 +725,7 @@ class InventoryController extends Controller
                 ->whereMonth('tanggal_keluar','10')
                 ->whereYear('tanggal_keluar',$tahun)
                 ->sum('qty_out');
-                $out2 = $jual10 + $keluar10;
+                $out10 = $jual10 + $keluar10;
 
                 $jual11 = DB::table('juals')
                 ->whereMonth('tanggal_jual','11')
@@ -735,7 +735,7 @@ class InventoryController extends Controller
                 ->whereMonth('tanggal_keluar','11')
                 ->whereYear('tanggal_keluar',$tahun)
                 ->sum('qty_out');
-                $out2 = $jual11 + $keluar11;
+                $out11 = $jual11 + $keluar11;
 
                 $jual12 = DB::table('juals')
                 ->whereMonth('tanggal_jual','12')
@@ -745,75 +745,75 @@ class InventoryController extends Controller
                 ->whereMonth('tanggal_keluar','12')
                 ->whereYear('tanggal_keluar',$tahun)
                 ->sum('qty_out');
-                $out2 = $jual12 + $keluar12;
+                $out12 = $jual12 + $keluar12;
                 // END KELUAR
 
                 // MASUK
                 $in1 = DB::table('masuks')
-                ->whereMonth('tanggal_keluar','01')
-                ->whereYear('tanggal_keluar',$tahun)
+                ->whereMonth('tanggal_masuk','01')
+                ->whereYear('tanggal_masuk',$tahun)
                 ->sum('qty_in');
 
                 $in2 = DB::table('masuks')
-                ->whereMonth('tanggal_keluar','02')
-                ->whereYear('tanggal_keluar',$tahun)
+                ->whereMonth('tanggal_masuk','02')
+                ->whereYear('tanggal_masuk',$tahun)
                 ->sum('qty_in');
 
                 $in3 = DB::table('masuks')
-                ->whereMonth('tanggal_keluar','03')
-                ->whereYear('tanggal_keluar',$tahun)
+                ->whereMonth('tanggal_masuk','03')
+                ->whereYear('tanggal_masuk',$tahun)
                 ->sum('qty_in');
 
                 $in4 = DB::table('masuks')
-                ->whereMonth('tanggal_keluar','04')
-                ->whereYear('tanggal_keluar',$tahun)
+                ->whereMonth('tanggal_masuk','04')
+                ->whereYear('tanggal_masuk',$tahun)
                 ->sum('qty_in');
 
                 $in5 = DB::table('masuks')
-                ->whereMonth('tanggal_keluar','05')
-                ->whereYear('tanggal_keluar',$tahun)
+                ->whereMonth('tanggal_masuk','05')
+                ->whereYear('tanggal_masuk',$tahun)
                 ->sum('qty_in');
 
                 $in6 = DB::table('masuks')
-                ->whereMonth('tanggal_keluar','06')
-                ->whereYear('tanggal_keluar',$tahun)
+                ->whereMonth('tanggal_masuk','06')
+                ->whereYear('tanggal_masuk',$tahun)
                 ->sum('qty_in');
 
                 $in7 = DB::table('masuks')
-                ->whereMonth('tanggal_keluar','07')
-                ->whereYear('tanggal_keluar',$tahun)
+                ->whereMonth('tanggal_masuk','07')
+                ->whereYear('tanggal_masuk',$tahun)
                 ->sum('qty_in');
 
                 $in8 = DB::table('masuks')
-                ->whereMonth('tanggal_keluar','08')
-                ->whereYear('tanggal_keluar',$tahun)
+                ->whereMonth('tanggal_masuk','08')
+                ->whereYear('tanggal_masuk',$tahun)
                 ->sum('qty_in');
 
                 $in9 = DB::table('masuks')
-                ->whereMonth('tanggal_keluar','09')
-                ->whereYear('tanggal_keluar',$tahun)
+                ->whereMonth('tanggal_masuk','09')
+                ->whereYear('tanggal_masuk',$tahun)
                 ->sum('qty_in');
 
                 $in10 = DB::table('masuks')
-                ->whereMonth('tanggal_keluar','10')
-                ->whereYear('tanggal_keluar',$tahun)
+                ->whereMonth('tanggal_masuk','10')
+                ->whereYear('tanggal_masuk',$tahun)
                 ->sum('qty_in');
 
                 $in11 = DB::table('masuks')
-                ->whereMonth('tanggal_keluar','11')
-                ->whereYear('tanggal_keluar',$tahun)
+                ->whereMonth('tanggal_masuk','11')
+                ->whereYear('tanggal_masuk',$tahun)
                 ->sum('qty_in');
 
                 $in12 = DB::table('masuks')
-                ->whereMonth('tanggal_keluar','12')
-                ->whereYear('tanggal_keluar',$tahun)
+                ->whereMonth('tanggal_masuk','12')
+                ->whereYear('tanggal_masuk',$tahun)
                 ->sum('qty_in');
                 // END MASUK
 
-                // STOK
-                $stk1 = DB::table('stoks')
-                ->sum('qty_in');
-                // END STOK
+                // // STOK
+                // $stk1 = DB::table('stoks')
+                // ->sum('stok');
+                // // END STOK
 
                 $chartPSI = new ChartJs;
                 $chartPSI->title('Purchase Stock Inventory');
@@ -833,17 +833,17 @@ class InventoryController extends Controller
                 ->color("#FF4B68")
                 ->backgroundcolor("#FF4B68");
 
-                $chartPSI->dataset("Stock", 'bar', [
-                    $stk1, $stk2, $stk3, $stk4, $stk5, $stk6, $stk7, $stk8, $stk9, $stk10, $stk11, $stk12
-                ])
-                ->color("#FFB830")
-                ->backgroundcolor("#FFB830");
+                // $chartPSI->dataset("Stock", 'bar', [
+                //     $stk1, $stk2, $stk3, $stk4, $stk5, $stk6, $stk7, $stk8, $stk9, $stk10, $stk11, $stk12
+                // ])
+                // ->color("#FFB830")
+                // ->backgroundcolor("#FFB830");
 
-                $chartPSI->dataset("Ratio", 'line', [
-                    $ratio1, $ratio2, $ratio3, $ratio4, $ratio5, $ratio6, $ratio7, $ratio8, $ratio9, $ratio10, $ratio11, $ratio12
-                ])
-                ->color("#57CC99")
-                ->backgroundcolor("#57CC99");
+                // $chartPSI->dataset("Ratio", 'line', [
+                //     $ratio1, $ratio2, $ratio3, $ratio4, $ratio5, $ratio6, $ratio7, $ratio8, $ratio9, $ratio10, $ratio11, $ratio12
+                // ])
+                // ->color("#57CC99")
+                // ->backgroundcolor("#57CC99");
                 /** =================================================*/
                 /*                      END PSI                      */
                 /* ==================================================*/
@@ -1019,7 +1019,7 @@ class InventoryController extends Controller
                 ->sum('qty');
 
                 $chartJual = new ChartJs;
-                $chartJual->title('Penjualan Unit '.$nama_dealer.'By Months');
+                $chartJual->title('Penjualan Unit '.$nama_dealer.' By Months');
                 $chartJual->displaylegend(true);
                 $chartJual->labels([
                     'Jan','Feb','Mar','Apr','May','Jun',
@@ -1206,13 +1206,110 @@ class InventoryController extends Controller
                 /** =================================================*/
                 /*                  5 STOK TERBANYAK                 */
                 /* ==================================================*/
-                $dataStok = DB::table('stoks')
+
+                $stok1 = DB::table('stoks')
+                ->select(DB::raw('SUM(stok) as jumlah'))
+                ->where('dealer_kode',$kode_dealer)
+                ->groupBy('nama_motor')
+                ->orderBy('jumlah','desc')
+                ->limit(1)
+                ->pluck('jumlah');
+
+                $stok2 = DB::table('stoks')
+                ->select(DB::raw('SUM(stok) as jumlah'))
+                ->where('dealer_kode',$kode_dealer)
+                ->groupBy('nama_motor')
+                ->orderBy('jumlah','desc')
+                ->skip(1)
+                ->take(1)
+                ->pluck('jumlah');
+                
+                $stok3 = DB::table('stoks')
+                ->select(DB::raw('SUM(stok) as jumlah'))
+                ->where('dealer_kode',$kode_dealer)
+                ->groupBy('nama_motor')
+                ->orderBy('jumlah','desc')
+                ->skip(2)
+                ->take(1)
+                ->pluck('jumlah');
+
+                $stok4 = DB::table('stoks')
+                ->select(DB::raw('SUM(stok) as jumlah'))
+                ->where('dealer_kode',$kode_dealer)
+                ->groupBy('nama_motor')
+                ->orderBy('jumlah','desc')
+                ->skip(3)
+                ->take(1)
+                ->pluck('jumlah');
+
+                $stok5 = DB::table('stoks')
+                ->select(DB::raw('SUM(stok) as jumlah'))
+                ->where('dealer_kode',$kode_dealer)
+                ->groupBy('nama_motor')
+                ->orderBy('jumlah','desc')
+                ->skip(4)
+                ->take(1)
+                ->pluck('jumlah');
+
+                $motor1 = DB::table('stoks')
                 ->select(DB::raw('SUM(stok) as jumlah'), 'nama_motor')
-                ->where([ ['stok','>','0'],['dealer_kode','=',$kode_dealer], ])
+                ->where('dealer_kode',$kode_dealer)
                 ->orderBy('jumlah','desc')
                 ->groupBy('nama_motor')
-                ->limit(5)
-                ->get();
+                ->limit(1)
+                ->pluck('nama_motor');
+
+                $motor2 = DB::table('stoks')
+                ->select(DB::raw('SUM(stok) as jumlah'), 'nama_motor')
+                ->where('dealer_kode',$kode_dealer)
+                ->orderBy('jumlah','desc')
+                ->groupBy('nama_motor')
+                ->skip(1)
+                ->take(1)
+                ->pluck('nama_motor');
+
+                $motor3 = DB::table('stoks')
+                ->select(DB::raw('SUM(stok) as jumlah'), 'nama_motor')
+                ->where('dealer_kode',$kode_dealer)
+                ->orderBy('jumlah','desc')
+                ->groupBy('nama_motor')
+                ->skip(2)
+                ->take(1)
+                ->pluck('nama_motor');
+
+                $motor4 = DB::table('stoks')
+                ->select(DB::raw('SUM(stok) as jumlah'), 'nama_motor')
+                ->where('dealer_kode',$kode_dealer)
+                ->orderBy('jumlah','desc')
+                ->groupBy('nama_motor')
+                ->skip(3)
+                ->take(1)
+                ->pluck('nama_motor');
+
+                $motor5 = DB::table('stoks')
+                ->select(DB::raw('SUM(stok) as jumlah'), 'nama_motor')
+                ->where('dealer_kode',$kode_dealer)
+                ->orderBy('jumlah','desc')
+                ->groupBy('nama_motor')
+                ->skip(4)
+                ->take(1)
+                ->pluck('nama_motor');
+
+                $chartStokTerbanyak = new MinimalistChartJs;
+                $chartStokTerbanyak->title('Stok Terbanyak Bisma Group');
+                $chartStokTerbanyak->displaylegend(true);
+                $chartStokTerbanyak->labels([
+                    $motor1, $motor2, $motor3, $motor4, $motor5
+                ]);
+                $chartStokTerbanyak->dataset("Stok", 'doughnut', [
+                    $stok1, $stok2, $stok3, $stok4, $stok5
+                ])
+                ->color([
+                    "#004182","#118DF0","#FBFFA3","#FF4B68","#3A9679"
+                ])
+                ->backgroundcolor([
+                    "#004182","#118DF0","#FBFFA3","#FF4B68","#3A9679"
+                ]);
                 /** =================================================*/
                 /*                END 5 STOK TERBANYAK               */
                 /* ==================================================*/
@@ -1220,15 +1317,129 @@ class InventoryController extends Controller
                 /** =================================================*/
                 /*                  5 UNIT TERLARIS                  */
                 /* ==================================================*/
-                $data = DB::table('juals')
+                $qty1 = DB::table('juals')
                 ->join('stoks','juals.stok_id','=','stoks.id_stok')
                 ->select(DB::raw('SUM(qty) as jumlah'), 'nama_motor')
-                ->whereYear('juals.tanggal_jual',$tahun)
                 ->where('juals.dealer_kode',$kode_dealer)
+                ->whereYear('tanggal_jual',$tahun)
+                ->groupBy('nama_motor')
+                ->orderBy('jumlah','desc')
+                ->limit(1)
+                ->pluck('jumlah');
+
+                $qty2 = DB::table('juals')
+                ->join('stoks','juals.stok_id','=','stoks.id_stok')
+                ->select(DB::raw('SUM(qty) as jumlah'), 'nama_motor')
+                ->where('juals.dealer_kode',$kode_dealer)
+                ->whereYear('tanggal_jual',$tahun)
+                ->groupBy('nama_motor')
+                ->orderBy('jumlah','desc')
+                ->skip(1)
+                ->take(1)
+                ->pluck('jumlah');
+                
+                $qty3 = DB::table('juals')
+                ->join('stoks','juals.stok_id','=','stoks.id_stok')
+                ->select(DB::raw('SUM(qty) as jumlah'), 'nama_motor')
+                ->where('juals.dealer_kode',$kode_dealer)
+                ->whereYear('tanggal_jual',$tahun)
+                ->groupBy('nama_motor')
+                ->orderBy('jumlah','desc')
+                ->skip(2)
+                ->take(1)
+                ->pluck('jumlah');
+
+                $qty4 = DB::table('juals')
+                ->join('stoks','juals.stok_id','=','stoks.id_stok')
+                ->select(DB::raw('SUM(qty) as jumlah'), 'nama_motor')
+                ->where('juals.dealer_kode',$kode_dealer)
+                ->whereYear('tanggal_jual',$tahun)
+                ->groupBy('nama_motor')
+                ->orderBy('jumlah','desc')
+                ->skip(3)
+                ->take(1)
+                ->pluck('jumlah');
+
+                $qty5 = DB::table('juals')
+                ->join('stoks','juals.stok_id','=','stoks.id_stok')
+                ->select(DB::raw('SUM(qty) as jumlah'), 'nama_motor')
+                ->where('juals.dealer_kode',$kode_dealer)
+                ->whereYear('tanggal_jual',$tahun)
+                ->groupBy('nama_motor')
+                ->orderBy('jumlah','desc')
+                ->skip(4)
+                ->take(1)
+                ->pluck('jumlah');
+
+                $unit1 = DB::table('juals')
+                ->join('stoks','juals.stok_id','=','stoks.id_stok')
+                ->select(DB::raw('SUM(qty) as jumlah'), 'nama_motor')
+                ->where('juals.dealer_kode',$kode_dealer)
+                ->whereYear('tanggal_jual',$tahun)
                 ->orderBy('jumlah','desc')
                 ->groupBy('nama_motor')
-                ->limit(5)
-                ->get();
+                ->limit(1)
+                ->pluck('nama_motor');
+
+                $unit2 = DB::table('juals')
+                ->join('stoks','juals.stok_id','=','stoks.id_stok')
+                ->select(DB::raw('SUM(qty) as jumlah'), 'nama_motor')
+                ->where('juals.dealer_kode',$kode_dealer)
+                ->whereYear('tanggal_jual',$tahun)
+                ->orderBy('jumlah','desc')
+                ->groupBy('nama_motor')
+                ->skip(1)
+                ->take(1)
+                ->pluck('nama_motor');
+
+                $unit3 = DB::table('juals')
+                ->join('stoks','juals.stok_id','=','stoks.id_stok')
+                ->select(DB::raw('SUM(qty) as jumlah'), 'nama_motor')
+                ->where('juals.dealer_kode',$kode_dealer)
+                ->whereYear('tanggal_jual',$tahun)
+                ->orderBy('jumlah','desc')
+                ->groupBy('nama_motor')
+                ->skip(2)
+                ->take(1)
+                ->pluck('nama_motor');
+
+                $unit4 = DB::table('juals')
+                ->join('stoks','juals.stok_id','=','stoks.id_stok')
+                ->select(DB::raw('SUM(qty) as jumlah'), 'nama_motor')
+                ->where('juals.dealer_kode',$kode_dealer)
+                ->whereYear('tanggal_jual',$tahun)
+                ->orderBy('jumlah','desc')
+                ->groupBy('nama_motor')
+                ->skip(3)
+                ->take(1)
+                ->pluck('nama_motor');
+
+                $unit5 = DB::table('juals')
+                ->join('stoks','juals.stok_id','=','stoks.id_stok')
+                ->select(DB::raw('SUM(qty) as jumlah'), 'nama_motor')
+                ->where('juals.dealer_kode',$kode_dealer)
+                ->whereYear('tanggal_jual',$tahun)
+                ->orderBy('jumlah','desc')
+                ->groupBy('nama_motor')
+                ->skip(4)
+                ->take(1)
+                ->pluck('nama_motor');
+
+                $chartUnitTerlaris = new MinimalistChartJs;
+                $chartUnitTerlaris->title('Best Selling Bisma Group');
+                $chartUnitTerlaris->displaylegend(true);
+                $chartUnitTerlaris->labels([
+                    $unit1, $unit2, $unit3, $unit4, $unit5
+                ]);
+                $chartUnitTerlaris->dataset("Unit", 'pie', [
+                    $qty1, $qty2, $qty3, $qty4, $qty5
+                ])
+                ->color([
+                    "#004182","#118DF0","#FBFFA3","#FF4B68","#3A9679"
+                ])
+                ->backgroundcolor([
+                    "#004182","#118DF0","#FBFFA3","#FF4B68","#3A9679"
+                ]);
                 /** =================================================*/
                 /*                 END 5 UNIT TERLARIS               */
                 /* ==================================================*/

@@ -52,6 +52,7 @@ class StokController extends Controller
             }
 
             $now = \Carbon\Carbon::now('GMT+8')->format('Y-m-d');
+            $tahun = \Carbon\Carbon::now('GMT+8')->format('Y');
             $data = DB::table('stoks')
             ->join('dealers','stoks.dealer_kode','=','dealers.kode_dealer')
             ->where('dealer_kode',$home)
@@ -73,7 +74,7 @@ class StokController extends Controller
             ->where('login', 'like', $now.'%')
             ->count();
 
-            return view('stok.data',compact('title','data','unit','warna','stok','home','now','data_user','count_user'));
+            return view('stok.data',compact('title','data','unit','warna','stok','home','now','data_user','count_user','tahun'));
         }
     }
 
